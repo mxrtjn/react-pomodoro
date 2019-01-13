@@ -9,13 +9,43 @@ class App extends React.Component{
                 <nav className="navbar navbar-inverse navbar-static-top">
                     <div className="container">
                         <div className="navbar-header">
-                        POMODORO APP
+                            POMODORO APP
+                       
                         </div>
                     </div>
                 </nav>            
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-12">
+                        <div className="col-sm-4">
+                            <h5><b>Short Break</b></h5>
+                            <div className="input-group">
+                                <span className="input-group-addon" id="basic-addon1">
+                                    <span className="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                </span>
+                                    <input type="text" className="form-control" placeholder="Duration" aria-describedby="basic-addon1"></input>
+                            </div>                               
+                        </div>
+                        <div className="col-sm-4">
+                            <h5><b>Long Break</b></h5>
+                            <div className="input-group">
+                                <span className="input-group-addon" id="basic-addon1">
+                                    <span className="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                </span>
+                                    <input type="text" className="form-control" placeholder="Duration" aria-describedby="basic-addon1"></input>
+                            </div>                              
+                        </div>
+                        <div className="col-sm-4">
+                            <h5><b>Pomodoro Duration</b></h5>
+                            <div className="input-group">
+                                <span className="input-group-addon" id="basic-addon1">
+                                    <span className="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                </span>
+                                    <input type="text" className="form-control" placeholder="Duration" aria-describedby="basic-addon1"></input>
+                            </div>                               
+                        </div>                                                
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-12 text-center">
                             <CircularProgressbar
                             percentage={percentage}
                             text={"00:00"}       
