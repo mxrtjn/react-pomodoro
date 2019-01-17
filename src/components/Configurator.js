@@ -1,32 +1,27 @@
 import React from "react";
 
 class Configuratior extends React.Component {
-
-    state = {
-        time: this.props.time
-    };
-
-  onChangeTaskText = e => {
-    this.setState({ time: isNaN(e.target.value) ? 3 : parseInt(e.target.value,10) });
-    //this.setState({ time: isNaN(e.target.value) ? 3 : parseInt(e.target.value,10) });
-  };
-
   render() {
+    const { title, isDisabled, time, onChangeText } = this.props;
     return (
       <div>
         <h5>
-          <b>{this.props.title}</b>
+          <b>{title}</b>
         </h5>
         <div className="input-group">
           <span className="input-group-addon" id="basic-addon1">
             <span className="glyphicon glyphicon-time" aria-hidden="true" />
           </span>
           <input
-            type="text"
+            type="number"
+            min="1"
+            max="60"
+            step="1"
+            disabled={isDisabled}
             className="form-control"
-            value={this.state.time}
+            value={time}
             placeholder="Duration"
-            onChange={this.onChangeTaskText}
+            onChange={onChangeText}
             aria-describedby="basic-addon1"
           />
         </div>

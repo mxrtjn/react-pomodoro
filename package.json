@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/mxrtjn/react-pomodoro#readme",
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.7.0",
     "react-circular-progressbar": "^1.0.0",
     "react-dom": "^16.7.0"
